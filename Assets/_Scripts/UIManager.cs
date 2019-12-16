@@ -5,35 +5,27 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public Transform cylinder;
-    public Transform cube;
-    public Transform sphere;
+    public Transform desk;
+    public Transform chair;
+    public Transform Whiteboard;
+    public Transform Trashcan;
 
-    public void createCube()
+    public void createDesk()
     {
-        Instantiate(cube);
+        Instantiate(desk);
     }
 
-    public void createCylinder()
+    public void createChair()
     {
-        Instantiate(cylinder);
+        Instantiate(chair);
     }
 
-    public void createSphere(string test)
+    public void createWhiteboard()
     {
-        Debug.Log(test);
-        Instantiate(sphere);
+        Instantiate(Whiteboard);
     }
-
-    //public void instantiateFurniture(Furniture furniture)
-    //{
-    //    Instantiate()
-    //}
-
-    //public enum Furniture
-    //{
-    //    Sphere_Prefab,
-    //    Cylinder_Prefab,
-    //    Cube_Prefab
-    //}
+    public void createTrashcan()
+    {
+        Instantiate(Trashcan);
+    }
 }
