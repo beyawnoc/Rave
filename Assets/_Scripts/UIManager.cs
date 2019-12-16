@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public Transform desk;
+    public Transform table;
     public Transform chair;
     public Transform Whiteboard;
     public Transform Trashcan;
 
-    public void createDesk()
+    public void createTable()
     {
-        Instantiate(desk);
+        Instantiate(table);
     }
 
     public void createChair()
