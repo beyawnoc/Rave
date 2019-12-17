@@ -10,22 +10,24 @@ public class UIManager : MonoBehaviour
     public Transform Whiteboard;
     public Transform Trashcan;
 
+    public Vector3 initialPos = new Vector3(0, 0, 0);
+
     public void createTable()
     {
-        Instantiate(table);
+        Instantiate(table, initialPos, Quaternion.Euler(-90, 0, 0));
     }
 
     public void createChair()
     {
-        Instantiate(chair);
+        Instantiate(chair, initialPos, Quaternion.Euler(-90, 0, 0));
     }
 
     public void createWhiteboard()
     {
-        Instantiate(Whiteboard);
+        Instantiate(Whiteboard, initialPos, Quaternion.Euler(-90, 0, 0));
     }
     public void createTrashcan()
     {
-        Instantiate(Trashcan);
+        Instantiate(Trashcan, initialPos, Quaternion.Euler(-90, 0, 0));
     }
 }

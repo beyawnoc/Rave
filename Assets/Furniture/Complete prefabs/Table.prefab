@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 406904285848020107}
   - component: {fileID: 8718577408715857597}
   - component: {fileID: 3153103161570026052}
+  - component: {fileID: -6909904109587133546}
+  - component: {fileID: 267713042544260207}
   m_Layer: 0
-  m_Name: table
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +83,28 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-6909904109587133546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746648072035817112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3722338c039624ca799ebe8ffbd06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &267713042544260207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746648072035817112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.67113596}
+  m_Center: {x: 0, y: 0, z: 0.33556798}

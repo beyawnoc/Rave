@@ -1383,11 +1383,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f29fb70f31d75498f22ad11317b037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  table: {fileID: 1792823761216926423, guid: 3a706f09f63b41440aba3ce8ac884637, type: 3}
-  chair: {fileID: 8868140941219340380, guid: 5ebf73e5f467ff64d820584fb9f44bed, type: 3}
-  Whiteboard: {fileID: 6121890014475203141, guid: ba6674e85bd946047a2347b414a82ec0,
+  table: {fileID: 406904285848020107, guid: 8d41f5e24502f7648aef058d1aa9622d, type: 3}
+  chair: {fileID: 6039740098190104233, guid: 20aedb9996024eb40925c83053b0b2a9, type: 3}
+  Whiteboard: {fileID: 3770705545058493905, guid: b2a8b9b56d314584b8efc14686f460c0,
     type: 3}
-  Trashcan: {fileID: 430313912794913185, guid: c17c9cc1af808f94a91a5000e316aa91, type: 3}
+  Trashcan: {fileID: 2162998877349808424, guid: 2edadf9e1d5f81048b23aec6ac1313fb,
+    type: 3}
 --- !u!4 &1501733073
 Transform:
   m_ObjectHideFlags: 0
