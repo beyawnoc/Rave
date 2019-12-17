@@ -13,13 +13,23 @@ public class movable_object : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void OnMouseDrag()
     {
+
+        if (Input.GetKey("q"))
+        {
+            transform.Rotate(0,0,5);
+        } else if (Input.GetKey("e"))
+        {
+            transform.Rotate(0, 0, -5);
+
+        }
+
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.transform.position.y - 1;
-        transform.position = Camera.main.ScreenToWorldPoint(mousePos);
+        var translatedPos = Camera.allCameras[1].ScreenToWorldPoint(mousePos);
+        translatedPos.y = 0;
+        transform.position = translatedPos;
     }
 }
