@@ -1389,6 +1389,7 @@ MonoBehaviour:
     type: 3}
   Trashcan: {fileID: 2162998877349808424, guid: 2edadf9e1d5f81048b23aec6ac1313fb,
     type: 3}
+  initialPos: {x: 0, y: 0, z: 0}
 --- !u!4 &1501733073
 Transform:
   m_ObjectHideFlags: 0
@@ -1503,6 +1504,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
