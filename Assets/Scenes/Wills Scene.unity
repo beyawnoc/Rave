@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 43824836}
   - component: {fileID: 43824835}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Main Camera 2d
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43824834}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &43824836
 Camera:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
+  m_TargetEye: 0
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
@@ -1374,8 +1374,8 @@ Canvas:
   m_GameObject: {fileID: 1947109004}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 43824836}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1402,6 +1402,7 @@ RectTransform:
   - {fileID: 389890825}
   - {fileID: 1431160088}
   - {fileID: 212428459}
+  - {fileID: 935955584}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
