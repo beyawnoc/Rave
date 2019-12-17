@@ -17,8 +17,7 @@ public class ui_oncollision : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("Collided");
-        if (col.gameObject.name != "Plane")
+        if (col.gameObject.tag == "Furniture")
         {
             Destroy(col.gameObject);
         }
@@ -26,14 +25,9 @@ public class ui_oncollision : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Collided 2");
+        if (col.tag == "Furniture")
+        {
+            Destroy(col.gameObject);
+        }
     }
-
-    void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("Collided 3");
-
-    }
-
-
 }
