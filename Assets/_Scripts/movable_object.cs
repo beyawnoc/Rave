@@ -17,6 +17,15 @@ public class movable_object : MonoBehaviour
 
     void OnMouseDrag()
     {
+
+        if (Input.GetKey("q"))
+        {
+            print("\t\tup arrow key is held down");
+        } else if (Input.GetKey("e"))
+        {
+            print("\t\tup arrow key is held down");
+        }
+
         Vector3 mousePos = Input.mousePosition;
         var translatedPos = Camera.allCameras[1].ScreenToWorldPoint(mousePos);
         translatedPos.y = 0;
