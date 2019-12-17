@@ -13,13 +13,13 @@ public class movable_object : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void OnMouseDrag()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.transform.position.y - 1;
-        transform.position = Camera.main.ScreenToWorldPoint(mousePos);
+        var translatedPos = Camera.allCameras[1].ScreenToWorldPoint(mousePos);
+        translatedPos.y = 0;
+        transform.position = translatedPos;
     }
 }
