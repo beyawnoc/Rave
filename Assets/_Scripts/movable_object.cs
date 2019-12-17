@@ -20,10 +20,11 @@ public class movable_object : MonoBehaviour
 
         if (Input.GetKey("q"))
         {
-            print("\t\tup arrow key is held down");
+            transform.Rotate(0,0,5);
         } else if (Input.GetKey("e"))
         {
-            print("\t\tup arrow key is held down");
+            transform.Rotate(0, 0, -5);
+
         }
 
         Vector3 mousePos = Input.mousePosition;
