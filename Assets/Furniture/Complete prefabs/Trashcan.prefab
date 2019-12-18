@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3486643526845190119}
   - component: {fileID: 7952773061993181054}
   - component: {fileID: -8987297493640334483}
+  - component: {fileID: 2041080117966557939}
   m_Layer: 8
   m_Name: Trashcan
   m_TagString: Furniture
@@ -105,3 +106,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020153577, y: 0.020153573, z: 0.038931888}
   m_Center: {x: 4.6566126e-10, y: -0.0000000032596281, z: 0.019465944}
+--- !u!114 &2041080117966557939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909287822233434939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3722338c039624ca799ebe8ffbd06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
