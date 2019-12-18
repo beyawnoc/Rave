@@ -121,24 +121,24 @@ public class RoomGenerator : MonoBehaviour {
         // Debug.Log(width / 10.0 + " lw " + length / 10.0);
         floor.transform.localScale = new Vector3(width / 10.0f, 1, length / 10.0f);
         Renderer floorRender = floor.GetComponent<Renderer>();
-        floorRender.material.mainTextureScale = new Vector2 (width / 7.5f, length / 7.5f);
+        floorRender.material.mainTextureScale = new Vector2 (width / 3.25f, length / 3.25f);
         floorRender.material.color = UnityEngine.Random.ColorHSV(0f, 1f, .25f, .8f, .25f, .8f);
 
         //make ceiling
         GameObject ceiling = Instantiate(ceilingPlane, new Vector3(0, height-.01f, 0), Quaternion.identity);
         ceiling.transform.localScale = new Vector3(width / 10.0f, 1, length / 10.0f);
         Renderer ceilingRender = ceiling.GetComponent<Renderer>();
-        ceilingRender.material.mainTextureScale = new Vector2 (width / 10, length / 10);
+        ceilingRender.material.mainTextureScale = new Vector2 (width / 5, length / 5);
         ceiling.transform.localRotation *= Quaternion.Euler(0, 0, 180);
         //floorRender.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
 
         if(length >= width){
-            for(int i = 0 ; i < length/2; i+=3 ){
+            for(int i = 0 ; i < length/4; i+=3 ){
                 Instantiate(pointLight, new Vector3(0, height-2, i), Quaternion.identity);
                 Instantiate(pointLight, new Vector3(0, height-2, -i), Quaternion.identity);
             }
         } else {
-            for(int i = 0 ; i < width/2; i+=3 ){
+            for(int i = 0 ; i < width/4; i+=3 ){
                 Instantiate(pointLight, new Vector3(i, height-2, 0), Quaternion.identity);
                 Instantiate(pointLight, new Vector3(-i, height-2, 0), Quaternion.identity);
             }
