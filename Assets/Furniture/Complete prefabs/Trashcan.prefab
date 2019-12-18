@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3722338c039624ca799ebe8ffbd06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateSpeed: 3
 --- !u!65 &-8987297493640334483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -118,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3722338c039624ca799ebe8ffbd06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateSpeed: 0.001
