@@ -25,6 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomGenerator : MonoBehaviour {
 
@@ -60,11 +61,15 @@ public class RoomGenerator : MonoBehaviour {
 
     private RectInt[] sHoles;
 
+    public Slider widthSlider;
+    public Slider heightSlider;
+    public Slider lengthSlider;
+
     //void Start () {
-    void GenerateRoom(int rHeight, int rWidth, int rLength){
-        height = rHeight;
-        width = rWidth;
-        length = rLength;
+    public void GenerateRoom(){ //int rHeight, int rWidth, int rLength
+        height = (int) heightSlider.value;
+        width = (int)widthSlider.value;
+        length = (int)lengthSlider.value;
 
         // convert dimensions into setpSize units
 

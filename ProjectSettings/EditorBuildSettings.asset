@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Final_Tetons.unity
     guid: dd7259a6fcfd65d44b3c1b454fd3fcb4
   - enabled: 1
-    path: Assets/Scenes/Henryscene2.unity
-    guid: d1de73fceaa2db540bfdcf840af4f227
+    path: Assets/Scenes/Final_Dynoroom.unity
+    guid: 4414f784b843e4047b575b5463bfbd5b
   m_configObjects: {}
