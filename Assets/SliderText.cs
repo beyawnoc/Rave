@@ -18,7 +18,7 @@ public class SliderText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Text>().text = label + " " + slider.value.ToString("0.0");
+        gameObject.GetComponent<Text>().text = label + " " + slider.value.ToString("0");
 
     }
 }
