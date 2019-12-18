@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movable_object : MonoBehaviour
 {
-    public int rotateSpeed = 3;
+    public float rotateSpeed = 0.001f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +22,10 @@ public class movable_object : MonoBehaviour
         if (Input.GetKey("q"))
         {
             transform.Rotate(0,0, rotateSpeed);
+            Debug.Log(rotateSpeed);
         } else if (Input.GetKey("e"))
         {
-            transform.Rotate(0, 0, (rotateSpeed * -1));
+            transform.Rotate(0, 0, (rotateSpeed * -1.0f));
 
         }
 
