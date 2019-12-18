@@ -33,16 +33,16 @@ public class RoomGenerator : MonoBehaviour {
 
     public GameObject floorPlane;
     // this is z
-    public float length;
+    public int length;
 
     //  width of plane, this is x
 
     [Tooltip("Width of plane")]
-    public float width;
+    public int width;
 
     //  height of plane
     [Tooltip("Height of plane")]
-    public float height;
+    public int height;
 
     // stepSize controls number of triangles - each triangle has short sides of length stepSize
  
@@ -61,7 +61,7 @@ public class RoomGenerator : MonoBehaviour {
     private RectInt[] sHoles;
 
     //void Start () {
-    void GenerateRoom(float rHeight, float rWidth, float rLength){
+    void GenerateRoom(int rHeight, int rWidth, int rLength){
         height = rHeight;
         width = rWidth;
         length = rLength;
@@ -198,11 +198,11 @@ public class RoomGenerator : MonoBehaviour {
         floor.RecalculateNormals();
         ceiling.RecalculateNormals();
 
-        Debug.Log((int) (Math.Floor(width / 4) - 1));
+        Debug.Log((int) (Math.Floor(width / 4.0) - 1));
         //sHoles = new RectInt[UnityEngine.Random.Range(1, (int) Math.Floor(width / 4) - 1)];
-        sHoles = new RectInt[UnityEngine.Random.Range((int) Math.Floor(width / 6) - 1, (int) Math.Floor(width / 4) - 1)];
+        sHoles = new RectInt[UnityEngine.Random.Range((int) Math.Floor(width / 6.0) - 1, (int) Math.Floor(width / 4.0) - 1)];
         for (int i = 0; i < sHoles.Length; i++) {
-            sHoles[i].x = 1 + (int) Math.Floor(width / 4) * i;
+            sHoles[i].x = 1 + (int) Math.Floor(width / 4.0) * i;
             //sHoles[i].x = 1 + (int) Math.Floor(width / sHoles.Length) * i;
             sHoles[i].y = 1;
             sHoles[i].width = 3;
