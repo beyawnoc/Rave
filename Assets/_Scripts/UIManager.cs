@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -29,5 +30,15 @@ public class UIManager : MonoBehaviour
     public void createTrashcan()
     {
         Instantiate(Trashcan, initialPos, Quaternion.Euler(-90, 0, 0));
+    }
+
+    public void resetScene(int sceneNum)
+    {
+        loadScene(sceneNum);
+    }
+
+    public void loadScene(int sceneNum)
+    {
+        SceneManager.LoadSceneAsync(sceneNum);
     }
 }
