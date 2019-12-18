@@ -25,9 +25,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class RoomGenerator : MonoBehaviour {
+public class RoomGeneratorDefault : MonoBehaviour {
 
     public GameObject pointLight;
     public GameObject ceilingPlane;
@@ -35,7 +34,6 @@ public class RoomGenerator : MonoBehaviour {
     public GameObject floorPlane;
     // this is z
     public int length;
-    private int winNum;
 
     //  width of plane, this is x
 
@@ -49,7 +47,7 @@ public class RoomGenerator : MonoBehaviour {
     // stepSize controls number of triangles - each triangle has short sides of length stepSize
  
     [Tooltip("Step size is length of short sides of triagles and controls resolution")]
-    public float stepSize = 1f;
+    public float stepSize = 0.1f;
 
     //  Material to use for plane
 
@@ -62,20 +60,11 @@ public class RoomGenerator : MonoBehaviour {
 
     private RectInt[] sHoles;
 
-    public Slider widthSlider;
-    public Slider heightSlider;
-    public Slider lengthSlider;
-    public Slider windowSlider;
-
-    //void Start () {
-    public void GenerateRoom(){ //int rHeight, int rWidth, int rLength
-        height = (float) heightSlider.value;
-        width = (float)widthSlider.value;
-        length = (int)lengthSlider.value;
-        winNum = (int)windowSlider.value;
-        Debug.Log(height);
-        Debug.Log(width);
-        Debug.Log(length);
+    void Start () {
+    //void GenerateRoom(float rHeight, float rWidth, float rLength){
+        // height = rHeight;
+        // width = rWidth;
+        // length = rLength;
 
         // convert dimensions into setpSize units
 
@@ -111,8 +100,6 @@ public class RoomGenerator : MonoBehaviour {
         myPlane.transform.position = new Vector3(0 - .5f * width, 0, 0 - .5f * length);
         Renderer myPlaneRenderer = myPlane.GetComponent<Renderer>();
         myPlaneRenderer.material = planeMaterial;
-        Debug.Log(myPlaneRenderer.bounds.center + " center");
-        myPlane.transform.position = new Vector3(myPlane.transform.position.x - myPlaneRenderer.bounds.center.x, myPlane.transform.position.y - myPlaneRenderer.bounds.center.y + .5f * height, myPlane.transform.position.z - myPlaneRenderer.bounds.center.z);
         //myPlaneRenderer.material.mainTextureScale = new Vector2 (width / 20, length / 20);
 
         //make floor
@@ -156,7 +143,7 @@ public class RoomGenerator : MonoBehaviour {
         MeshFilter mf;
 
         GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        plane.name = "Plane01";
+        plane.name = "Plane";
         mf = plane.GetComponent<MeshFilter>();
         //mf.mesh = createMesh(size.x, size.y);
 
@@ -171,6 +158,8 @@ public class RoomGenerator : MonoBehaviour {
         hwall2.vertices = newvert;
         hwall1 = FlipMesh(hwall1);
 
+        Debug.Log("sizey " + size.y);
+        Debug.Log("sizex " + size.x);
         Mesh wwall3 = createMesh(length, size.y);
         newvert = (Vector3[]) wwall3.vertices.Clone();
         for (int i = 0; i < wwall3.vertexCount; i++) {
@@ -190,24 +179,13 @@ public class RoomGenerator : MonoBehaviour {
         wwall3.RecalculateNormals();
         wwall4.RecalculateNormals();
 
-        //Debug.Log((int) (Math.Floor(width / 4.0) - 1));
-        //sHoles = new RectInt[UnityEngine.Random.Range(1, (int) Math.Floor(width / 4) - 1)];
-        // sHoles = new RectInt[UnityEngine.Random.Range((int) Math.Floor(width / 6.0) - 1, (int) Math.Floor(width / 4.0) - 1)];
-        sHoles = new RectInt[winNum];
-        for (int i = 0; i < winNum; i++) {
-            sHoles[i].x = 1 + (int) Math.Floor(width / 4.0) * i;
-            //sHoles[i].x = 1 + (int) Math.Floor(width / sHoles.Length) * i;
-            sHoles[i].y = 1;
-            sHoles[i].width = 3;
-            sHoles[i].height = (int) height - 2;
-        }
+
+
         hwall1 = createMesh(size.x, size.y);
         hwall1 = FlipMesh(hwall1);
         hwall1.RecalculateNormals();
 
         mf.mesh = CombineMeshes( new List<Mesh> {hwall1, hwall2, wwall3, wwall4});
-        //mf.mesh.RecalculateNormals();
-        //mf.mesh = hwall1;
         return plane;
     }
 

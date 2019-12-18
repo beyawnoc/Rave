@@ -237,7 +237,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053947285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2466b3ecd381c2f4693fa0c9fd9ae3db, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d41094c843222b4fb9d6d39dafea95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointLight: {fileID: 7889794450150561448, guid: 6aaa3ea3a40224e42a2c053459583775,
@@ -247,8 +247,8 @@ MonoBehaviour:
   floorPlane: {fileID: 1511150415929736067, guid: 869224a3ed9e2fd4199f67803d718c87,
     type: 3}
   length: 15
-  width: 15
-  height: 7
+  width: 30
+  height: 8
   stepSize: 1
   planeMaterial: {fileID: 2100000, guid: e8f884c9eb4b32a4397e52558e1b4661, type: 2}
 --- !u!4 &1053947287
